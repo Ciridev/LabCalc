@@ -1,0 +1,44 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+t, x, y, vx, vy = np.loadtxt('trajectory.dat', unpack=True, usecols = (0, 1, 2, 3, 4))
+
+plt.figure(1)
+plt.title('Trajectory')
+plt.xlabel('x(t)')
+plt.ylabel('y(t)')
+plt.gca().set_aspect('equal')
+plt.plot(x, y, 'r--', label='[x(t), y(t)]')
+plt.legend()
+plt.savefig('trajectory.png')
+
+plt.figure(2)
+plt.title('x in funzione di t')
+plt.xlabel('t')
+plt.ylabel('x')
+plt.gca().set_aspect('equal')
+plt.plot(t, x, 'g--.', label='x(t)')
+plt.legend()
+plt.savefig('x.png')
+    
+plt.figure(3)
+plt.title('y in funzione di t')
+plt.xlabel('t')
+plt.ylabel('y')
+plt.gca().set_aspect('equal')
+plt.plot(t, y, 'b--.', label='y(t)')
+plt.legend()
+plt.savefig('y.png')
+
+plt.figure(4)
+plt.title('Velocity field')
+plt.gca().set_aspect('equal')
+
+for i in range(0, len(x), 5):
+    xi = x[i]
+    yi = y[i]
+    vxi = vx[i]
+    vyi = vy[i]
+    plt.arrow(xi, yi, vxi, vyi, width = 0.1, head_width = 0.2, head_length = 0.3, fc = 'darkviolet', ec = 'darkviolet')
+
+plt.savefig('velocity_field.png')

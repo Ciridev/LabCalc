@@ -1,0 +1,25 @@
+For information about GNU Emacs and the GNU system, type C-h C-a.
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Saving file /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c...
+Wrote /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c
+Auto-saving...done
+user-error: No mark set in this buffer [2 times]
+Saving file /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c...
+Wrote /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c
+Saving file /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c...
+Wrote /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c
+Saving file /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c...
+Wrote /Users/ciri/Desktop/dev/LabCalc/Lezione 3/circle.c
+Auto-saving...done
+Auto-saving...done
+Mark set
+Auto-saving...done
+C-x RET RET is undefined
+command-execute: Buffer is read-only: #<buffer *Messages*>
+user-error: Beginning of history; no preceding item [10 times]
