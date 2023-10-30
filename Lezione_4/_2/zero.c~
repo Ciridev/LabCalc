@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+double sinc(double x)
+{
+  return sin(x) / x;
+}
+
+int main(int argc, char** argv)
+{
+  double a = -15.0, b = 15.0;
+  double dx = (b - a) / (NP - 1);
+  int num_zero = 0;
+
+  for(int i = 0; i < NP - 1; i++)
+  {
+    double x_l = a + i * dx;
+    double x_r = a + (i + 1) * dx;
+
+    if(x_l == 0 && sinc(x_r) < 0 || x_r == 0 && sinc(x_l) < 0)
+    {
+	num_zero++;
+    }
+    else if(sinc(x_l) * sinc(x_r) < 0)
+    {
+	num_zero++;
+    }
+  }
+
+  printf("The algorithm found %d zeros.", num_zero);
+  
+  return 0;
+}
