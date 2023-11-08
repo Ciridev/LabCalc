@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+1import matplotlib.pyplot as plt
 import numpy as np
 
 t, x, y, vx, vy = np.loadtxt('trajectory.dat', unpack=True, usecols = (0, 1, 2, 3, 4))
